@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package sba_circuit_forge;
+
+// A simple message representing a circuit component
+message Component {
+  string id = 1;
+  string type = 2; // e.g., "R", "C", "L", "V"
+  string value = 3; // e.g., "1k", "10u", "5V"
+  repeated string nodes = 4; // Node connections
+}
+
+// A simple message representing a snapshot of the circuit workspace
+message CircuitSnapshot {
+  repeated Component components = 1;
+  string netlist = 2; // Generated raw netlist
+}
