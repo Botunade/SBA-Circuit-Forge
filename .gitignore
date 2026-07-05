@@ -1,0 +1,32 @@
+# Build artifacts
+build/
+bin/
+lib/
+
+# Generated Python protobuf files
+*_pb2.py
+*_pb2_grpc.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# C/C++ build artifacts
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json

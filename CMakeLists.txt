@@ -17,6 +17,9 @@ FetchContent_Declare(
 # We will just declare it here as per instructions, though building it might require further setup.
 # FetchContent_MakeAvailable(ngspice)
 
+# Find Protobuf
+find_package(Protobuf REQUIRED)
+
 # Add subdirectories for our C++ pillars
 add_subdirectory(engine_pulse)
 add_subdirectory(ui_canvas)
