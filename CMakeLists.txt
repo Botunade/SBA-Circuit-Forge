@@ -20,6 +20,17 @@ FetchContent_Declare(
 # Find Protobuf
 find_package(Protobuf REQUIRED)
 
+# Add a flag to indicate if we are building for Android
+option(BUILD_FOR_ANDROID "Build for Android NDK" OFF)
+
+# Fetch Standalone Asio
+FetchContent_Declare(
+  asio
+  URL https://github.com/chriskohlhoff/asio/archive/refs/tags/asio-1-30-2.tar.gz
+)
+FetchContent_MakeAvailable(asio)
+
+
 # Add subdirectories for our C++ pillars
 add_subdirectory(engine_pulse)
-add_subdirectory(ui_canvas)
+# The ui_canvas is removed as the UI will be handled by a browser engine.
